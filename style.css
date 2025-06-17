@@ -1,36 +1,62 @@
 /* General body styling */
-body {
+body,button {
     font-family: 'Oswald', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #868686;
     color: #333;
     line-height: 1.6;
     padding: 20px;
 }
 
+p {
+    font-weight:900;
+}
+
+img {
+    width:400px;
+    margin:auto;
+    padding:5px;
+    border-radius: 20px;
+    border: dashed #222 3px;
+}
 /* Title section styling */
 .title h1 {
     text-align: center;
-    color: #333;
+    color: #222;
+    background-color: #f4f4f4;
+    border-radius: 50%;
 }
 
 /* Questions section styling */
-.questions {
+.questions{
+    display:grid;
+    align-self:center;
     background-color: #fff;
-    margin: 20px;
+    margin: auto;
+    width:75%;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.questions h4 {
+.questions h3 {
     color: #666;
+    text-align:center;
 }
 
-.questions img {
-    width: 100%; /* Make images responsive */
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
+h3 {
+    font-size:200%
+}
+
+.list-answer {
+    background-color: #e2e2e2;
+    box-shadow: #333 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color:#222;
+    margin:5px;
+    padding:10px;
+    padding-left:30px;
+    font-size:18pt;
+    list-style-type:none;
 }
 
 /* Result section styling */
@@ -41,4 +67,23 @@ body {
     margin-top: 20px;
     border-radius: 8px;
     font-size: 1.2em;
+    display: none;
+}
+
+.button-submit {
+    text-align:center;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin:10px;
+    border-radius: 20%;
+    background-color: dodgerblue;
+    font-weight: 1000;
+    font-size:20pt;
+    color:#f4f4f4    
+}
+
+.q-1, .q-2,.q-3,.q-4,.q-5,.q-6,.q-7,.q-8,.q-9,.q-10 {
+    display:none;
 }

@@ -1,23 +1,150 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>INT: Unit 4 Quiz Project</title>
+        <title>Addison: Unit 4 Quiz Project</title>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <script defer src="script.js"></script>
     </head>
     <body>
         <div class="title">
-            <h1>Your Quiz Title Here!</h1>
+            <h1>Which Math Symbol are you?</h1>
         </div>
         <div class="questions">
-            <h4>User Question #1</h4>
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-06/24/16/asset/815a5287257c/anigif_sub-buzz-4360-1624553394-78_preview.gif?output-quality=auto&output-format=auto&downsize=360:*">
-            <h4>User Question #2</h4>
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2018-11/19/17/asset/buzzfeed-prod-web-05/anigif_sub-buzz-18467-1542667455-1.gif">
+            <div class="questions q-start">
+                <h3>Welcome!</h3>
+                <img src="data:image/jpeg;base64,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">
+                <h4>
+                    We needed a test subject...ahem volunteer for this
+                    so we're so happy you're here. Enjoy!
+                </h4>
+                <button class="button-submit" id="start">Start Quiz!</button>
+            </div>
+
+            <div class="questions q-1">
+                    <h3>Question 1:</h3>
+                    <h3 class="question-text">First day at the beach! What do you want to do first?</h3>
+                    <ul class="set-1">
+                        <li class="list-answer answer-A" onClick ="takeAnswer('1-A')">Go surfing!</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('1-B')">Go swimming!</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('1-C')">Jump in the pool!</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('1-D')">I don't want sandy feet right now...</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-1" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub1">Next Question</button>    
+            </div>
+            <div class="questions q-2">
+                    <h3>Question 2:</h3>
+                    <h3 class="question-text">Great day at the beach? Good! What your choice of music?</h3>
+                    <ul class="set-2">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('2-A')">The radio</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('2-B')">I have a Spotify Playlist</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('2-C')">I brought my guitar</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('2-D')">Silence</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-2" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub2">Next Question</button>
+            </div>
+            <div class="questions q-3">
+                    <h3>Question 3:</h3>
+                    <h3 class="question-text">Wait a minute I forgot to ask! Do you want to go to a party?</h3>
+                    <ul class="set-3">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('3-A')">You bet!</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('3-B')">I suppose</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('3-C')">I'd rather read a book</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('3-D')">I'd rather walk on the beach at night</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-3" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub3">Next Question</button>
+                </div>
+            <div class="questions q-4">
+                    <h3>Question 4:</h3>
+                    <h3 class="question-text">I cant decide between mango and blue rasberry for my snowball!</h3>
+                    <ul class="set-4">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('4-A')">Mango!</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('4-B')">Blue Rasberry!</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('4-C')">I can't decide!!</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('4-D')">Green Apple!</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-4" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub4">Next Question</button>
+                </div>
+            <div class="questions q-5">
+                    <h3>Question 5:</h3>
+                    <h3 class="question-text">What's better, hiking or swimming?</h3>
+                    <ul class="set-5">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('5-A')">Hiking</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('5-B')">Swimming</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('5-C')">Both!</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('5-D')">Neither</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-5" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub5">Next Question</button>
+            </div>
+            <div class="questions q-6">
+                    <h3>Question 6:</h3>
+                    <h3 class="question-text">What's the first chore you get done?</h3>
+                    <ul class="set-6">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('6-A')">What are chores?</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('6-B')">Dishes</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('6-C')">Clothes</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('6-D')">Cleaning the house</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-6" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub6">Next Question</button>
+            </div>
+            <div class="questions q-7">
+                    <h3>Question 7:</h3>
+                    <h3 class="question-text">What sports do you play?</h3>
+                    <ul class="set-7">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('7-A')">Swimming</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('7-B')">Soccer</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('7-C')">I don't play sports</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('7-D')">I used to play sports, but I can't now</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-7" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub7">Next Question</button>
+            </div>
+            <div class="questions q-8">
+                    <h3>Question 8:</h3>
+                    <h3 class="question-text">How long would you last in a library?</h3>
+                    <ul class="set-8">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('8-A')">An hour, tops</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('8-B')">8 hours, not pushing it</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('8-C')">A day, as long as I have food</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('8-D')">I can live in a library!</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-8" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub8">Next Question</button>
+                </div>
+            <div class="questions q-9">
+                    <h3>Question 9:</h3>
+                    <h3 class="question-text">What would you do if 2 friends came over to your house?</h3>
+                    <ul class="set-9">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('9-A')">Gaming</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('9-B')">Throwing/Kicking a ball</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('9-C')">Swimming in the pool</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('9-D')">Heading into our part of the forest</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-9" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub9">Next Question</button>
+            </div>
+            <div class="questions q-10">
+                    <h3>Question 10:</h3>
+                    <h3 class="question-text">Last Question: What's the one fruit that you'll eat as a snack?</h3>
+                    <ul class="set-10">
+                       <li class="list-answer answer-A" onClick ="takeAnswer('10-A')">Apple</li>
+                        <li class="list-answer answer-B" onClick ="takeAnswer('10-B')">Grapes</li>
+                        <li class="list-answer answer-C" onClick ="takeAnswer('10-C')">I don't care for fruit</li>
+                        <li class="list-answer answer-D" onClick ="takeAnswer('10-D')">Watermelon!</li>
+                        <li class="list-answer answer-custom"><input class= "answer-custom-10" placeholder="Got a different answer?"></li>
+                    </ul>
+                    <button class="button-submit" id="sub10">Submit the Quiz!</button>
+                </div>
+            
         </div>
         <div class="result">
-            This is where the user will see their quiz result.
+           
         </div>
     </body>
 </html>
