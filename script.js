@@ -39,19 +39,27 @@ function takeAnswer(answer){
 
 }
 
-let pCounter,mCounter,xCounter,sCounter,cCounter,eCounter,tCounter,iCounter;
-pCounter = mCounter = xCounter = sCounter = cCounter = eCounter = tCounter = iCounter=0;
+let pCounter =0, mCounter =0;
+let xCounter =0, sCounter =0;
+let cCounter =0, eCounter =0;
+let tCounter =0, iCounter =0;
+
+let pFinal,mFinal,xFinal,sFinal,cFinal,eFinal,tFinal,iFinal;
 
 function compileAnswers(){
     for (var i =0;i<10;i++){
         let registerItem;
 
-        if (customAnswerArray[i]!==null){
+        if (customAnswerArray[i]!==""){
             cCounter++;
             sCounter++;
+        } else if (answerArray[i]==="") {
+            iCounter++;
         } else {
             registerItem = answerArray[i];
-            switch (i) {
+            //console.log(registerItem);
+            //console.log(i+1);
+            switch (i+1) {
                 case 1:
                     switch (registerItem) {
                         case "1-A":
@@ -228,15 +236,87 @@ function compileAnswers(){
                 
             }
         }
+
     }
-    console.log("Plus: "+pCounter);
-    console.log("Minus: "+mCounter);
-    console.log("Multiple: "+xCounter);
-    console.log("Star: "+sCounter);
-    console.log("Carat: "+cCounter);
-    console.log("Mark: "+eCounter);
-    console.log("Percent: "+tCounter);
-    console.log("Constant: "+iCounter);
+    pFinal = Math.round((pCounter/8)*100);
+    mFinal = Math.round((mCounter/6)*100);
+    xFinal = Math.round((xCounter/12)*100);
+    sFinal = Math.round((sCounter/11)*100);
+    cFinal = Math.round((cCounter/10)*100);
+    eFinal = Math.round((eCounter/11)*100);
+    tFinal = Math.round((tCounter/11)*100);
+    iFinal = iCounter*10;
+
+    if (!customAnswerArray.includes("")) iFinal+=30;
+
+    iFinal*=2;
+
+    console.log("Plus: "+pFinal+"%");
+    console.log("Minus: "+mFinal+"%");
+    console.log("Multiple: "+xFinal+"%");
+    console.log("Star: "+sFinal+"%");
+    console.log("Carat: "+cFinal+"%");
+    console.log("Mark: "+eFinal+"%");
+    console.log("Percent: "+tFinal+"%");
+    console.log("Constant: "+iFinal);
+
+    let imgSource;
+    let resultsTab = document.querySelector(".result");
+    let fullAnswer = "";
+
+    if (iFinal>=60) {
+        fullAnswer = "the constant, i";
+        imgSource = "letterI.png";
+        if (iFinal>=80) {
+            fullAnswer = "the constant, e";
+            imgSource = "letterE.png";
+        }
+        if (iFinal>=100){
+            fullAnswer = "the constant, π";
+            imgSource = "pi.png";
+        }
+
+    }
+    else {
+        let topSymbol = Math.max(pFinal,mFinal,xFinal,sFinal,cFinal,eFinal,tFinal);
+
+        switch (topSymbol) {
+            case pFinal:
+                fullAnswer = "a plus sign";
+                imgSource = "plusSign.png";
+                break;
+            case mFinal:
+                fullAnswer = "a minus sign";
+                imgSource = "minusSign.png";
+                break;
+            case xFinal:
+                fullAnswer = "a multiplication sign";
+                imgSource = "multiplySign.png";
+                break;
+            case sFinal:
+                fullAnswer = "an asterisk";
+                imgSource = "asteriskStar.png";
+                break;
+            case cFinal:
+                fullAnswer = "a caret sign";
+                imgSource = "caretSign.png";
+                break;
+            case eFinal:
+                fullAnswer = "an exclamation mark";
+                imgSource = "exclamationMark.png";
+                break;
+            case tFinal:
+                fullAnswer = "a percent sign";
+                imgSource = "percentSign.png";
+                break;
+        }
+    }
+    
+    resultsTab.innerHTML = `
+        <h3>Congratulations your math sign is ${fullAnswer}!</h3>
+        <img src=${imgSource}>
+    `;
+    
     
 }
 
